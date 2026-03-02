@@ -7,62 +7,75 @@ STEP 1: Add the required HTML5 skeleton
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Study Planner</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
     <!-- =========================================================
     STEP 2: Build the “top area” (site name + navigation) using simple HTML
     ========================================================= -->
-<header>
-  <p>Study Planner</p>
+<header class="site-header">
+  <div class="container header-inner">
+    <p class="brand">Study Planner<span class="dot">.</span></p>
 
-  <nav>
-    <ul>
-      <li><a href="#overview">Overview</a></li>
-      <li><a href="#features">Features</a></li>
-      <li><a href="#focus">Focus</a></li>
-      <li><a href="#get-started">Get Started</a></li>
-    </ul>
-  </nav>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#focus">Focus</a></li>
+        <li><a href="#get-started">Get Started</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
     <!-- =========================================================
     STEP 3: Hero section + “Get Started button” as a link
     ========================================================= -->
 <main>
-  <section id="overview">
+  <section id="overview" class="hero">
+  <div class="container hero-content">
     <h1>Plan smarter, study calmer.</h1>
-    <p>A simple study planner that helps you organize tasks and reduce stress.</p>
-    <a href="#get-started">Get Started</a>
+    <p class="hero-subhead">A simple study planner that helps you organize tasks and reduce stress.</p>
+    <a class="btn btn-dark" href="#get-started">Get Started</a>
+  </div>
 
-    <img src="images/hero.jpg" alt="A desk with a planner and laptop arranged neatly for studying">
-  </section>
+  <img src="images/hero.jpg" alt="A desk with a planner and laptop arranged neatly for studying">
+</section>
 
     <!-- =========================================================
     STEP 4: Features section (3 blocks) + featured content section
     ========================================================= -->
-  <section id="features">
-    <h2>Features</h2>
+<section id="features" class="features">
+  <div class="container">
+    <h2 class="section-title">Features</h2>
 
-    <section>
-      <h3>Weekly Planning</h3>
-      <p>Organize your weekly study schedule and see all your tasks at a glance.</p>
-    </section>
+    <div class="features-grid">
+      <section class="feature">
+        <div class="icon">✓</div>
+        <h3>Weekly Planning</h3>
+        <p>Organize your weekly study schedule and see all your tasks at a glance.</p>
+      </section>
 
-    <section>
-      <h3>Task Breakdown</h3>
-      <p>Break large assignments into smaller, manageable steps.</p>
-    </section>
+      <section class="feature">
+        <div class="icon">≡</div>
+        <h3>Task Breakdown</h3>
+        <p>Break large assignments into smaller, manageable steps.</p>
+      </section>
 
-    <section>
-      <h3>Focus Sessions</h3>
-      <p>Track focused study time and build consistent study habits.</p>
-    </section>
-  </section>
+      <section class="feature">
+        <div class="icon">⏱</div>
+        <h3>Focus Sessions</h3>
+        <p>Track focused study time and build consistent study habits.</p>
+      </section>
+    </div>
+  </div>
+</section>
 
-  <section id="focus">
-    <h2>Featured Content</h2>
-    <p>
+  <section id="focus" class="featured">
+  <div class="container">
+    <h2 class="section-title">Featured Content</h2>
+    <p class="section-lede">
       The 3-step method helps reduce procrastination:
       write the task, break it into steps, and schedule the first action today.
     </p>
@@ -73,45 +86,67 @@ STEP 1: Add the required HTML5 skeleton
       <li>Take a short break and repeat</li>
     </ul>
 
-    <img src="images/featured.jpg" alt="A checklist with study tasks and time blocks written down">
-  </section>
+    <div class="media">Featured image area</div>
+  </div>
+</section>
 
     <!-- =========================================================
     STEP 5: Two secondary content blocks + CTA section 
     ========================================================= -->
-  <section>
-    <h2>More Tools</h2>
+<section id="tools" class="secondary">
+  <div class="container">
+    <h2 class="section-title">More Tools</h2>
 
-    <section>
-      <h3>Assignment Tracker</h3>
-      <p>Keep all your deadlines in one place so you never miss an important task.</p>
-    </section>
+    <div class="secondary-grid">
+      <div class="card">
+        <div class="card-text">
+          <h3>Assignment Tracker</h3>
+          <p>Keep all your deadlines in one place so you never miss an important task.</p>
+          <a class="btn btn-outline" href="#get-started">Learn More</a>
+        </div>
+        <div class="card-image img-a"></div>
+      </div>
 
-    <section>
-      <h3>Reflection Notes</h3>
-      <p>Write short notes after studying to improve your next session.</p>
-    </section>
-  </section>
+      <div class="card">
+        <div class="card-text">
+          <h3>Reflection Notes</h3>
+          <p>Write short notes after studying to improve your next session.</p>
+          <a class="btn btn-outline" href="#get-started">Learn More</a>
+        </div>
+        <div class="card-image img-b"></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <section id="get-started">
+<section id="get-started" class="cta">
+  <div class="container cta-inner">
     <h2>Heard enough?</h2>
     <p>Start planning your week today and take control of your study routine.</p>
-    <a href="#overview">Build My Plan</a>
-  </section>
-
+    <a class="btn btn-dark" href="#overview">Build My Plan</a>
+  </div>
+</section>
     <!-- =========================================================
     STEP 6: Footer 
     ========================================================= -->
 </main>
 
-<footer>
-  <p>© 2026 Study Planner</p>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <p>© 2026 Study Planner</p>
+      <p><a href="#overview">Back to top</a></p>
+    </div>
 
-  <ul>
-    <li><a href="#overview">Overview</a></li>
-    <li><a href="#features">Features</a></li>
-    <li><a href="#get-started">Get Started</a></li>
-  </ul>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Links</h4>
+        <a href="#overview">Overview</a>
+        <a href="#features">Features</a>
+        <a href="#get-started">Get Started</a>
+      </div>
+    </div>
+  </div>
 </footer>
 
 </body>
